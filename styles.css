@@ -1,0 +1,54 @@
+
+.d3-component svg {
+  background: #ddd;
+  max-height: 300px;
+}
+
+@media all and (max-width: 1000px) {
+  .d3-component svg {
+    max-height: 200px;
+  }
+}
+
+/* CSS for scroller portion */
+.bar, .circle {
+  margin-left: 42vw;
+  background: transparent;
+  transition: 400ms linear all;
+}
+
+/* Format the graphics */
+.circle {
+  height: 35vh;
+}
+
+.bar {
+  width: 25vw;
+  height: 10vh;
+}
+
+/* Animations */
+.rotate1 {
+  transform: rotate(90deg);
+}
+
+.rotate2 {
+  transform: rotate(210deg);
+}
+
+.enlarge1 {
+  transform: scale(2);
+}
+
+.enlarge2 {
+  transform: scale(2.2);
+}
+
+/* Change graphic background based on Scroller id */
+#idyll-scroll-0 .idyll-scroll-graphic {
+  background:  #F0F0F0;
+}
+
+#idyll-scroll-1 .idyll-scroll-graphic {
+  background: #5BAFC1;
+}
