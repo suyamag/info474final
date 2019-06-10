@@ -161,12 +161,35 @@ If you picked a goat on your initial guess then Monty will open the second goat 
 Thanks to Monty's choice, you know that switching would lead to a win because only the car is left.
 Therefore, since you have a 2/3 chance to pick a goat, then using the switch method has a 2/3 chance of winning!
 
-##Important things to note
+##Simulations
+By running a Monte Carle simulation, the results of many trials agrees with the result of our deduction
+
+![trials](static/images/montecarlo.png)
+
+[link text:"source" url:"https://www.reddit.com/r/dataisbeautiful/comments/7lcffs/i_ran_a_monte_carlo_analysis_of_the_monty_hall/" /].
+
+##Naive Bayes
+We can further corroborate this solution by using Naive Bayes to deduce the probability of the car being behind each door given the fact that Monty has opened a door.
+The proof below displays that the probability of the car being behind your first choice as 1/3, while the probability of the car being behind
+the other door is 2/3
+
+![naive](static/images/prooftree.jpg)
+[link text:"source" url:"http://ucanalytics.com/blogs/bayes-theorem-monty-hall-problem/" /]
+
+#Dispelling Misconceptions
 
 if you decide to stay, then your chances remain 1/3, because you made your choice before any prior interference was made, and decided to stick with that choice
 
-##Dispelling misconceptions: 50/50 probability and Markov chain
-many statisticians have argued that Monty's choice does not reveal any new information relevant to the probabilities of the doors.
+## 50/50 probability and Markov chain
+Many statisticians have argued that Monty's choice does not reveal any new information relevant to the probabilities of the doors.
+For example, a Markov chain is a series of random events where the outcome of event n is only dependent on the outcome of the event n-1.
+Because the door that Monty opens does not directly touch the chain of events that leads to the second choice, it should have no bearing on the final outcome.
+Therefore, the chain of probabilities is as follows:
+
+P(initial door) + P(second choice)
+
+(1/3) + (1/3)(1/2) = 1/2.
+
 This is a true assessment if only looking at the subjective probability. The uncertainty of the situation is 50/50 because the remaining outcomes of either 
 a winning or a losing scenario is 50% (one car and one goat).
 
